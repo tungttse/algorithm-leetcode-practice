@@ -12,12 +12,13 @@ var longestSubarray = function(nums) {
         }
 
         if(count0 > 1) {
+            console.log(`left ${left} | i = ${i} | count0 ${count0}`);
             if (nums[left++] === 0) {
                 count0--;
             }
         }
     }
-
+    console.log(`left ${left} | i = ${i} | count0 ${count0}`);
     return i - left - 1;
 };
 
